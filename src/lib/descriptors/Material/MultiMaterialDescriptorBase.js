@@ -7,7 +7,7 @@ import resource from '../decorators/resource';
 import ResourceReference from '../../Resources/ResourceReference';
 
 import PropTypes from 'react/lib/ReactPropTypes';
-// import propTypeInstanceOf from '../../utils/propTypeInstanceOf';
+import propTypeInstanceOf from '../../utils/propTypeInstanceOf';
 
 @resource
 class MultiMaterialDescriptorBase extends THREEElementDescriptor {
@@ -32,7 +32,7 @@ class MultiMaterialDescriptorBase extends THREEElementDescriptor {
       updateInitial: true,
       update: (threeObject, materials) => {
         // console.log('update', materials);
-        this._materials = [...materials];
+        this._materials = [...materials]
         threeObject.materials = materials;
         threeObject.needsUpdate = true;
       },

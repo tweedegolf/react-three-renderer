@@ -117,6 +117,17 @@ class MaterialDescriptorBase extends THREEElementDescriptor {
     });
   }
 
+  hasMaterials() {
+    this.hasProp('material', {
+      type: PropTypes.array,
+      updateInitial: true,
+      update: (threeObject, material) => {
+        threeObject.material = material;
+      },
+      default: [],
+    });
+  }
+
   construct() {
     return new THREE.Material({});
   }

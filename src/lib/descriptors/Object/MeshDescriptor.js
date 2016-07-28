@@ -9,6 +9,7 @@ class MeshDescriptor extends Object3DDescriptor {
   construct(props) {
     const geometry = props.hasOwnProperty('geometry') ? props.geometry : undefined;
     const material = props.hasOwnProperty('material') ? props.material : undefined;
+    const materials = props.hasOwnProperty('materials') ? props.materials : undefined;
 
     const mesh = new THREE.Mesh(geometry, material);
 
@@ -22,6 +23,10 @@ class MeshDescriptor extends Object3DDescriptor {
       mesh.material = undefined;
     }
 
+    if (materials) {
+      mesh.material = materials;
+    }
+
     return mesh;
   }
 
@@ -30,7 +35,8 @@ class MeshDescriptor extends Object3DDescriptor {
       child instanceof THREE.Material ||
       child instanceof ResourceReference ||
       child instanceof THREE.Geometry ||
-      child instanceof THREE.BufferGeometry
+      child instanceof THREE.BufferGeometry ||
+      child instanceof THREE.MultiMaterial
     );
 
     return invalid;

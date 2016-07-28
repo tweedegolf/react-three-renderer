@@ -3,12 +3,11 @@ import MultiMaterialDescriptorBase from './MultiMaterialDescriptorBase';
 
 class MultiMaterialDescriptor extends MultiMaterialDescriptorBase {
 
-/*
   constructor(react3RendererInstance) {
     super(react3RendererInstance);
     // this.hasMaterials();
   }
-*/
+
   construct(props) {
     const materialsDescription = this.getMaterialDescription(props);
 
