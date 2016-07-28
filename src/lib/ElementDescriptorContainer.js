@@ -77,6 +77,7 @@ import LineDashedMaterialDescriptor from './descriptors/Material/LineDashedMater
 import MeshDepthMaterialDescriptor from './descriptors/Material/MeshDepthMaterialDescriptor';
 import MeshNormalMaterialDescriptor from './descriptors/Material/MeshNormalMaterialDescriptor';
 import SpriteMaterialDescriptor from './descriptors/Material/SpriteMaterialDescriptor';
+import MultiMaterialDescriptor from './descriptors/Material/MultiMaterialDescriptor';
 
 import CameraHelperDescriptor from './descriptors/Object/Helper/CameraHelperDescriptor';
 import AxisHelperDescriptor from './descriptors/Object/Helper/AxisHelperDescriptor';
@@ -121,6 +122,7 @@ class ElementDescriptorContainer {
       meshDepthMaterial: new MeshDepthMaterialDescriptor(react3RendererInstance),
       meshNormalMaterial: new MeshNormalMaterialDescriptor(react3RendererInstance),
       spriteMaterial: new SpriteMaterialDescriptor(react3RendererInstance),
+      multiMaterial: new MultiMaterialDescriptor(react3RendererInstance),
 
       texture: new TextureDescriptor(react3RendererInstance),
 
